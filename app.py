@@ -19,9 +19,9 @@ def convert_txt_to_speech(text='', lang='ru', slow=False, id=''):
         return audio
 
 
-@bot.message_handler(commands=["start"])
-def start(m, res=False):
-    bot.send_message(m.chat.id, 'Я на связи. Напиши мне что-нибудь )')
+@bot.message_handler(commands=["check"])
+def start(m):
+    bot.send_message(m.chat.id, 'Я готов к работе')
 
 
 @bot.message_handler(content_types=["text"])
